@@ -48,3 +48,15 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5222/api/tasks/4
+
+###
+GET http://localhost:5222/api/tasks/search?query=ASP
+
+###
+GET http://localhost:5222/api/tasks/priority/High
+
+###
+GET http://localhost:5222/api/tasks/stats
+
+###
+GET http://localhost:5222/api/tasks/sorted?by=priority&desc=false
