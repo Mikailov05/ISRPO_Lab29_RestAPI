@@ -1,0 +1,50 @@
+GET http://localhost:5222/api/tasks
+
+###
+GET http://localhost:5222/api/tasks?completed=true
+
+###
+GET http://localhost:5222/api/tasks?completed=false
+
+###
+GET http://localhost:5222/api/tasks/1
+
+###
+GET http://localhost:5222/api/tasks/999
+
+###
+POST http://localhost:5222/api/tasks
+Content-Type: application/json
+
+{
+    "title": "Задача из REST Client",
+    "description": "Создана через файл .http",
+    "priority": "High"
+}
+
+###
+POST http://localhost:5222/api/tasks
+Content-Type: application/json
+
+{
+    "title": "",
+    "description": "Описание без заголовка",
+    "priority": "Normal"
+}
+
+###
+PATCH http://localhost:5222/api/tasks/2/complete
+
+###
+PUT http://localhost:5222/api/tasks/1
+Content-Type: application/json
+
+{
+    "title": "Изучить ASP.NET Core (обновлено)",
+    "description": "Контроллеры, маршруты, DTO",
+    "isCompleted": true,
+    "priority": "High"
+}
+
+###
+DELETE http://localhost:5222/api/tasks/4
